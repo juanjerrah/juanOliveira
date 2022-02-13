@@ -44,9 +44,7 @@
         },
         data() {
             return {
-                id: Number,
-                op1: '',
-                op2: '',
+                
                 lista: [...this.dados], // deve representar a lista dada
 
             };
@@ -57,7 +55,7 @@
         },
         methods: {
             update() {
-                let newArr = [...this.dados];
+               
             },
             
 
