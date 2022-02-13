@@ -4,13 +4,17 @@
     <div class="question-text">
         Modifique este componente para que exiba as entradas da lista de objetos (com a estrutura abaixo) cujas as propriedades devem ser inputs no componente <tt>div.entrada</tt>, atualizando
         seus valores no componente pai caso editadas. Cada objeto na lista deve pertencer ao seu próprio elemento. Exiba todos corretamente, exiba os indicadores corretos e repasse os dados ao componente pai ao se clicar no botão atualizar.
-        <br />
+        <br /><br />
+        <hr/>
+        op1:
+        <input v-model="op1"/>
+        op2:
+        <input v-model="op2"/>
         <pre class="json-example"><i>// Entrada:</i>
-<code>{
-    id: Number,
-    op1: String,
-    op2: String
-}</code></pre>
+<code>
+      {{lista}}
+</code>
+    </pre>
     </div>
 
     Indicadores:
@@ -21,6 +25,7 @@
     </ul>
 
     <div class="entradas">
+        
         <div class="entrada" v-for="i in lista" v-bind:key="i">
         </div>
     </div>
@@ -39,7 +44,11 @@
         },
         data() {
             return {
-                lista: [""] // deve representar a lista dada
+                id: Number,
+                op1: '',
+                op2: '',
+                lista: [...this.dados], // deve representar a lista dada
+
             };
         },
         watch: {},
@@ -48,7 +57,10 @@
         },
         methods: {
             update() {
-            }
+                let newArr = [...this.dados];
+            },
+            
+
         }
     }
 </script>
@@ -84,4 +96,16 @@
  .json-example > code {
      font-family: "Courier New", monospace !important;
  }
+ li{
+     list-style-type: none;
+ }
 </style>
+
+
+
+
+// {{ {
+//         id: number,
+//         op1: string,
+//         op2: String
+//     } }}

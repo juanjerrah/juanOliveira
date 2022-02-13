@@ -1,20 +1,22 @@
 <template>
-  <div class="title"> Questões Vue.js 3 </div>
-  <div class="info">
-    Abaixo estão três componentes cuja estrutura apresentada deve ser modificada a fim
-    de replicar as funcionalidades neles pedidas. Seu código deve contemplar todas as
-    funcionalidades requisitadas, bem como as mudanças visuais a fim de tornar a página esteticamente mais agradável e adequada a experiência do usuário.
-  </div>
-  <Senha />
-  <DropDown ref="dd" :opcoesDD="opcoesSelect" />
-  <Lista :dados="dadosLista" @mudancaEmitida="mudancaLista" />
-  <br />
-  <div class="info msg">
-    Em caso de dúvida entre em contato pelo email <a href="mailto:mardt@usp.br">mardt@usp.br</a>.
+  <div class="main">
+    <div class="title"> Questões Vue.js 3 </div>
+    <div class="info">
+      Abaixo estão três componentes cuja estrutura apresentada deve ser modificada a fim
+      de replicar as funcionalidades neles pedidas. Seu código deve contemplar todas as
+      funcionalidades requisitadas, bem como as mudanças visuais a fim de tornar a página esteticamente mais agradável e adequada a experiência do usuário.
+    </div>
+    <Senha />
+    <DropDown ref="dd" :opcoesDD="opcoesSelect" />
+    <Lista :dados="dadosLista" @mudancaEmitida="mudancaLista" />
     <br />
-    Boa sorte e bom trabalho!
-    <br />
-    (⌒‿⌒)
+    <div class="info msg">
+      Em caso de dúvida entre em contato pelo email <a href="mailto:mardt@usp.br">mardt@usp.br</a>.
+      <br />
+      Boa sorte e bom trabalho!
+      <br />
+      (⌒‿⌒)
+    </div>
   </div>
 </template>
 
@@ -22,7 +24,6 @@
   import Lista from './components/Lista.vue';
   import Senha from './components/Senha.vue';
   import DropDown from './components/DropDown.vue';
-
   export default {
     name: 'App',
     components: {
@@ -64,11 +65,26 @@
 </script>
 
 <style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
  #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #2c3e50 ;
+  background: #eee;
+ }
+ .main{
+   max-width: 950px;
+   margin: auto;
+   border: 1px solid #000;
+   border-radius: 10px;
+   padding: 10px;
+
  }
 
  .title {

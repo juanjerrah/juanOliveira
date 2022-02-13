@@ -38,5 +38,15 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "<p align=\"center\">\r     <img width=\"200\" src=\"https://avatars.githubusercontent.com/u/53086380\" />\r </p>",
+  "main": "babel.config.js",
+  "repository": "git+https://github.com/juanjerrah/juanOliveira.git",
+  "keywords": [],
+  "author": "Juan Jerrah <juanjerrah15@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanjerrah/juanOliveira/issues"
+  },
+  "homepage": "https://github.com/juanjerrah/juanOliveira#readme"
 }
